@@ -1,0 +1,540 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .navbar {
+    position: relative;
+   width: auto; /* or the height of your image */
+   height:600px;
+  }
+
+  .nav-left a {
+    color: white;
+    text-decoration: none;
+    margin-right: 2rem;
+    font-weight: 500;
+    
+  }
+
+  .nav-left a:hover {
+    text-decoration: underline;
+  }
+
+  /* Hide the checkbox */
+  #menu-toggle {
+    display: none;
+  }
+
+  /* Hamburger button */
+  .toggler-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 34px;
+    height: 28px;
+    cursor: pointer;
+  }
+
+  .toggler-button span {
+    display: block;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+  }
+
+  /* Dropdown menu */
+  .dropdown {
+    display: none;
+    position: absolute;
+    right: 1rem;
+    top: 100%;
+    background: #444;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    min-width: 140px;
+    z-index: 10;
+  }
+
+  .dropdown a {
+    display: block;
+    color: #d8d5cb;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+  }
+
+  .dropdown a:hover {
+    background: #666;
+  }
+
+  /* Show dropdown when checkbox is checked */
+  #menu-toggle:checked + label + .dropdown {
+    display: block;
+  }
+
+
+  .roses1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* or fixed size */
+    height: 100%;
+    object-fit: cover; /* optional, to fill nicely */
+    z-index: 1; /* behind */
+  }
+  
+ 
+  .flex{
+    display: flex;
+    justify-content: space-between;
+  }
+  .positin-navbar {
+    position: relative;
+    z-index: 2; /* on top of image */
+    /* add padding or margin so content is visible */
+    padding: 50px;
+    color: #d8d5cb; /* if image is dark, adjust colors */
+  }
+
+
+  @font-face {
+    font-family: 'MyCustomFont';
+    src: url('fonts/OpenSauceOne-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'kompot';
+    src: url('fonts/KompotRegular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+    @font-face {
+        font-family: 'MyCustomFont2';
+        src: url('fonts/OpenSauceOne-Bold.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+  }
+
+
+  a {
+    font-family: 'MyCustomFont', sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #d8d5cb;
+  }
+
+  .header-center{
+    position: relative;
+    z-index: 2;
+    color: #d8d5cb ;
+    top: 30%;
+  transform: translateY(-50%);
+
+    
+    
+  }
+ p {
+    font-family: 'MyCustomFont', sans-serif;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #d8d5cb;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  .first-line{
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .fisrt-word{
+    margin: 0;
+    padding: 0;
+    height: 20px;
+  }
+
+  .second-line{
+    
+  }
+
+  
+
+ h5 {
+    font-family: 'MyCustomFont2', sans-serif;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #d8d5cb;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 30px;
+  }
+
+  .name{
+    font-family: 'kompot';
+    text-transform: uppercase;
+    font-size: 100px;
+    color: #d8d5cb;
+    letter-spacing: 10px;
+    text-align: center;
+    margin: -5px 0px 0px 10px;
+    font-weight: 100;
+    
+  }
+
+.pic1{
+    width: 237px;
+    height: 200px;
+    left: 50%;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 25px;
+  }
+
+
+.she{
+    font-family:'kompot';
+    text-transform: uppercase;
+    font-size: 25px;
+    color: black;
+    letter-spacing: 3px;
+    text-align: center;
+    font-weight: 100;
+    margin: 0;
+    padding-top: 60px;
+    padding-bottom: 25px;
+
+   
+  }
+  .text1,
+  .text2{
+    color: black;
+  }
+  .text2{
+    padding-bottom: 40px;
+  }
+
+  .main{
+    background-color: #fcfcfc;
+    
+  }
+
+
+  .skills{padding-top: 50px;
+padding-bottom: 20px;}
+
+  .skill-box{
+    display: grid;
+    grid-template-columns:2fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  @media (max-width: 800px) {
+    .skill-box {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.4fr 1fr 0.7fr 1fr !important; /* let rows size naturally */
+      gap: 20px;
+    }
+    
+    /* Remove all grid-area from mobile, so items naturally stack */
+    .magic,
+    .skill1,
+    .skill2,
+    .skill3 {
+      grid-area: auto !important;
+    }
+
+    .magic{
+        text-align: left !important;
+        padding-left: 35px !important;
+        margin-bottom: 0 !important;
+    
+    }
+
+    .skill1,
+    .skill2,
+    .skill3 {
+      text-align: left !important;
+      padding-left: 35px !important;
+      padding-right: 35px !important; 
+    }
+    .gossip, .goblin, .abuse {
+        text-align: left !important;
+        padding-right: 0 !important; 
+       
+    }
+    .eat,
+    .tea{
+        padding-top:15px !important ;
+    }
+
+  }
+
+  @media (min-width: 800px) {
+    .breaker{
+        margin-left: auto;
+        max-width: 40vw !important
+    }
+  }
+  
+  .skill1{
+    grid-area: 1/ 2 / 2/ 3;
+
+  }
+  .skill3{
+    grid-area: 3/2/4/3;
+  }
+  .skill2{
+    grid-area: 2/2/3/3;
+  }
+
+  .magic{
+    font-family: 'kompot';
+    font-size: 30px;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 100;
+    padding-right: 60px;
+    text-align: right;
+    line-height: 1;
+    height: 30px;
+  }
+  .breaker {
+    width: 100%;
+  max-width: 70vw;
+    height: 1px;
+    background-color: black;
+    margin-top: 3px;
+    
+
+  }
+
+  .slay,
+  .tea,
+  .eat{
+    font-weight: bold;
+  }
+
+  .bonus,
+  .mana,
+  .passive{
+    color: #535353;
+    padding: 0 0 10px 0;
+  }
+.goblins{
+  
+}
+.gossip, .goblin, .abuse {
+    max-width: 100%;
+    width: auto; 
+    padding-right: 30px;
+    text-align: left;
+  }
+
+
+
+  .eat{
+    padding-top: 30px;
+  }
+  .tea{
+    padding-top: 10px;
+
+  }
+
+
+
+
+  .roses2{
+    width: 100%; /* or fixed size */
+    height: 800px;
+    object-fit: cover;
+    position: absolute;
+   
+  }
+  .contact{
+grid-area: 1/1/2/2;
+position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+    
+  
+  .form{
+    grid-area: 1/2/2/3;
+    position: relative;
+  }
+  a:-webkit-any-link {
+    
+    text-decoration: none;
+}
+
+
+.footer{
+    display: grid ;
+    grid-template-columns: 1fr 1fr;
+    height: 700px;
+
+}
+@media (max-width: 600px) {
+    .footer {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center;
+      height: auto !important;
+    }
+  
+    .contact, .form {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+    }
+  
+    form {
+      width: 100%;
+    }
+  
+    input,{
+      width: 100%;
+    }
+    .roses2{
+        height:1100px;
+    }
+   .big{
+    width: 250px;
+   }
+}
+
+    
+
+   
+.icons{
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.big{
+    font-family: 'kompot';
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+.small{
+    font-family: 'MyCustomFont', sans-serif;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.cat{
+    
+    
+}
+
+
+.form{display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+    
+    
+    
+}
+input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    color: #000;
+    font-size: 16px;
+    width: 250px;
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 20px 50px 20px 50px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 30px;
+    font-family: 'MyCustomFont', sans-serif;
+    text-transform: uppercase;
+    font-size: 11px;
+  }
+
+  form{
+    width: 380px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+
+  .in,
+  .fa,
+  .twi{
+    margin: 20px;
+  }
+
+  input::placeholder {
+ 
+    color: #aaa;
+  }
+
+  .small{
+    padding: 20px;
+  }
+  .big{
+    padding-top: 30px;
+    
+  }
+
+  .company{
+    position: relative;
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+    font-size: 10px;
+  }
+
+  .plus{
+    font-family: 'kompot';
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    padding-left: 20px;
+    padding-bottom: 40px;
+  }
+
+
+  @media (max-width: 600px) {
+.me{
+    color: transparent !important;
+}
+
+.header-center{
+    padding-left: 20px;
+  padding-right: 20px;
+}
+.name{
+    font-size: 80px !important;
+}
+h5{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+  }
+
+
+  
